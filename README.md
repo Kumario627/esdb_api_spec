@@ -12,7 +12,7 @@ API一覧を記載する。
 | API ID | Overview |
 | ----- | ---- |
 | [ESDB-API-001](#ESDB-API-001_エンチャント一覧取得) | エンチャント一覧取得 |
-| ESDB-API-002 | 効果一覧取得 |
+| [ESDB-API-002](#ESDB-API-002_効果一覧取得) | 効果一覧取得 |
 | ESDB-API-003 | 貼付位置一覧取得 |
 | ESDB-API-004 | 対象一覧取得 |
 | ESDB-API-005 | エンチャント検索（通常条件設定） |
@@ -34,10 +34,29 @@ GET
 ### Input
 `None`
 ### Output
-Format  `JSON`
+Format:`JSON(Array)`
 | Key |	Type | Description |
 | --- | ---- | ----------- |
-| enchant_id | string | エンチャントID
+| enchant_id | string | エンチャントID |
 | enchant_name | string | エンチャント名 |
 | enchant_name_2 | string | エンチャント別名 |
 | enchant_name_en | string | エンチャント英名 |
+
+## ESDB-API-002_効果一覧取得
+効果一覧を全件取得する。
+### Path
+```
+/effect/id
+```
+### Method
+```
+GET
+```
+### Input
+`None`
+### Output
+Format:`JSON(Array)`
+| Key |	Type | Description |
+| --- | ---- | ----------- |
+| effect_id | string | 効果ID |
+| effect | string | 効果ト名 |
