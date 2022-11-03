@@ -1,9 +1,7 @@
 # 概要
 ESDB の公開API一覧を記載する。
 
-# エンドポイント
-APIのエンドポイントは下記の通り。  
-  
+# API Endpoint  
 ```
 https://wd5zeazzd9.execute-api.ap-northeast-1.amazonaws.com/Prod
 ```
@@ -25,17 +23,17 @@ API一覧を記載する。
 
 ## ESDB-API-001_エンチャント一覧取得
 エンチャント一覧を全件取得する。  
-### パス
+### Path
 ```
 /enchant/id
 ```
-### METHOD
+### Method
 ```
 GET
 ```
-### 入力
+### Input
 `None`
-### 出力
+### Output
 Format  `JSON`
 | Key |	Type | Description |
 | --- | ---- | ----------- |
