@@ -34,9 +34,9 @@ API一覧を記載する。
 GET
 ```
 ### 入力
-None
+`None`
 ### 出力
-Format: JSON
+Format  `JSON`
 | Key |	Type | Description |
 | --- | ---- | ----------- |
 | enchant_id | string | エンチャントID
