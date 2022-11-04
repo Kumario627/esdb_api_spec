@@ -81,3 +81,24 @@ Format:`JSON(Array)`
 | position_id | string | 位置ID |
 | name | string | 位置名　|
 | name_en | string | 位置名（英） |
+
+## ESDB-API-004_対象一覧取得
+対象一覧を全件取得する。
+### Path
+```
+/target/id
+```
+### Method
+```
+GET
+```
+### Input
+` None `
+
+### Output
+Format:`JSON(Array)`
+| Key | Type | Description |
+| --- | ---- | ----------- |
+| target_code | string | 対象ID |
+| target_name | string | 対象表示名 |
+
