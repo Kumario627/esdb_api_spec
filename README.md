@@ -15,7 +15,7 @@ API一覧を記載する。
 | [ESDB-API-002](#ESDB-API-002_効果一覧取得) | 効果一覧取得 |
 | [ESDB-API-003](#ESDB-API-003_貼付位置一覧取得) | 貼付位置一覧取得 |
 | [ESDB-API-004](#ESDB-API-004_対象一覧取得) | 対象一覧取得 |
-| ESDB-API-005 | エンチャント検索（通常条件設定） |
+| [ESDB-API-005](#ESDB-API-005_エンチャント検索（通常条件設定）) | エンチャント検索（通常条件設定） |
 | ESDB-API-006 | エンチャント検索（フリーワード） |
 | ESDB-API-007 | エンチャント情報取得（id) |
 | ESDB-API-008 | ランクのエンチャント成功確率取得 |
@@ -102,3 +102,34 @@ Format:`JSON(Array)`
 | target_code | string | 対象ID |
 | target_name | string | 対象表示名 |
 
+## ESDB-API-005_エンチャント検索（通常条件設定）
+エンチャント通常検索処理の結果を返す。  
+Inputを指定しない場合は全件取得する。
+
+### Path
+```
+/detail
+```
+### Method
+```
+GET
+```
+### Input
+Format: `Query string`
+| name | Description |
+| ---- | ----------- |
+| enchantName　| エンチャント名 |
+| effect　| 効果ID |
+| effectVal　| 効果の値 |
+| range　| 以上: 1, 以下: 2 |
+| position　| 位置ID |
+| rank　| ランク |
+| rankRange　| 一致: 1, 以上: 2, 以下:3 |
+| target　| 対象ID |
+
+
+### Output
+Format:`JSON(Array)`
+| Key | Type | Description |
+| --- | ---- | ----------- |
+|   |  |   |
