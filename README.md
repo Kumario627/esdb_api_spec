@@ -13,7 +13,7 @@ API一覧を記載する。
 | ----- | ---- |
 | [ESDB-API-001](#ESDB-API-001_エンチャント一覧取得) | エンチャント一覧取得 |
 | [ESDB-API-002](#ESDB-API-002_効果一覧取得) | 効果一覧取得 |
-| ESDB-API-003 | 貼付位置一覧取得 |
+| [ESDB-API-003](#ESDB-API-003_貼付位置一覧取得) | 貼付位置一覧取得 |
 | ESDB-API-004 | 対象一覧取得 |
 | ESDB-API-005 | エンチャント検索（通常条件設定） |
 | ESDB-API-006 | エンチャント検索（フリーワード） |
@@ -35,7 +35,7 @@ GET
 `None`
 ### Output
 Format:`JSON(Array)`
-| Key |	Type | Description |
+| Key | Type | Description |
 | --- | ---- | ----------- |
 | enchant_id | string | エンチャントID |
 | enchant_name | string | エンチャント名 |
@@ -60,3 +60,24 @@ Format:`JSON(Array)`
 | --- | ---- | ----------- |
 | effect_id | string | 効果ID |
 | effect | string | 効果名 |
+
+## ESDB-API-003_貼付位置一覧取得
+貼付情報一覧を全件取得する。
+### Path
+```
+/position/id
+```
+### Method
+```
+GET
+```
+### Input
+`None`
+
+### Output
+Format:`JSON(Array)`
+| Key | Type | Description |
+| --- | ---- | ----------- |
+| position_id | string | 位置ID |
+| name | string | 位置名　|
+| name_en | string | 位置名（英） |
