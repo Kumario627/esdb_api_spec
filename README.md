@@ -59,4 +59,4 @@ Format:`JSON(Array)`
 | Key |	Type | Description |
 | --- | ---- | ----------- |
 | effect_id | string | 効果ID |
-| effect | string | 効果ト名 |
+| effect | string | 効果名 |
