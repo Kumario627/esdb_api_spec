@@ -129,7 +129,27 @@ Format: `Query string`
 
 
 ### Output
-Format:`JSON(Array)`
+Format:`JSON`
 | Key | Type | Description |
 | --- | ---- | ----------- |
-|   |  |   |
+| enchant_list | array(object) | エンチャント情報の配列　詳細は*1参照 |
+| effect_name | object | 効果名情報 詳細は*2参照 |
+
+#### *1 enchant_list
+enchant_listの配列内オブジェクトの構成を示す。
+| Key | Type | Description |
+| --- | ---- | ----------- |
+| enchant_id | string | |
+| position_id | string | |
+| rank | string | |
+| rank_seq | number | |
+| rank_ignore_fl | string | |
+| enchant_name | string | |
+| enchant_name_2 | string | |
+| enchant_name_en | string | |
+| target_code | string | |
+| target_name | string | |
+| imp_flg | string | |
+| effect_kbn | string | |
+| effect_name | string | |
+| route_name | string | |
