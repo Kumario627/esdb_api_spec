@@ -153,7 +153,8 @@ enchant_list配列内オブジェクトの構成を示す。
 | effect_kbn | string | 効果区分 |
 | effect_name | string | エンチャントの効果区分 |
 | route_name | string | 入手先 |
-| disp_val | number | 効果の値 ※Input でeffect の指定があった場合のみ返却される |
+| disp_val | number | 効果の値 ※Input で effect の指定があった場合のみ返却される |
+| invalid_target_flg | string | 貼付可否 0:可能, 1:不可能 *Input で target の指定があった場合のみ返却される |
 
 effect_kbnは4種類存在する。  
 画面表示時に色の出し分けをするための区分。
