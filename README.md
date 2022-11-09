@@ -136,20 +136,33 @@ Format:`JSON`
 | effect_name | object | 効果名情報 詳細は*2参照 |
 
 #### *1 enchant_list
-enchant_listの配列内オブジェクトの構成を示す。
+enchant_list配列内オブジェクトの構成を示す。
 | Key | Type | Description |
 | --- | ---- | ----------- |
-| enchant_id | string | |
-| position_id | string | |
-| rank | string | |
-| rank_seq | number | |
-| rank_ignore_fl | string | |
-| enchant_name | string | |
-| enchant_name_2 | string | |
-| enchant_name_en | string | |
-| target_code | string | |
-| target_name | string | |
-| imp_flg | string | |
-| effect_kbn | string | |
-| effect_name | string | |
-| route_name | string | |
+| enchant_id | string | エンチャントID |
+| position_id | string | 位置ID |
+| rank | string | ランク |
+| rank_seq | number | ランクの内部シーケンス |
+| rank_ignore_flg | string | ランクに関係なくエンチャント可能か 0:不可, 1:可 (ランクA以下は全て0) |
+| enchant_name | string | エンチャント名 |
+| enchant_name_2 | string | エンチャント別名 |
+| enchant_name_en | string | エンチャント英名 |
+| target_code | string | 対象コード |
+| target_name | string | 対象表示名 |
+| imp_flg | string | 実装済か 0:未実装 1:実装 |
+| effect_kbn | string | 効果区分 |
+| effect_name | string | エンチャントの効果区分 |
+| route_name | string | 入手先 |
+| disp_val | number | 効果の値 ※Input でeffect の指定があった場合のみ返却される |
+
+effect_kbnは4
+
+#### *2 effect_name
+effect_name オブジェクトの構成を示す。  
+※Input でeffect の指定があった場合のみ返却される
+| Key | Type | Description |
+| --- | ---- | ----------- |
+| effect_id | string | 効果ID
+| effect | string | 効果表示名 |
+
+
