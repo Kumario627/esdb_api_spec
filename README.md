@@ -155,7 +155,14 @@ enchant_list配列内オブジェクトの構成を示す。
 | route_name | string | 入手先 |
 | disp_val | number | 効果の値 ※Input でeffect の指定があった場合のみ返却される |
 
-effect_kbnは4
+effect_kbnは4種類存在する。  
+画面表示時に色の出し分けをするための区分。
+| Key | Description |
+| --- | ----------- |
+| increase | 増加 |
+| decrease | 減少 |
+| designated | 専用 |
+| not-relevant | ランクに関係なくエンチャント可能 |
 
 #### *2 effect_name
 effect_name オブジェクトの構成を示す。  
