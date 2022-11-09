@@ -115,7 +115,11 @@ Inputを指定しない場合は全件取得する。
 GET
 ```
 ### Input
-Format: `Query string`
+Format: `Query string`  
+参考)  
+効果ID: [ESDB-API-002](#ESDB-API-002_効果一覧取得)  
+位置ID: [ESDB-API-003](#ESDB-API-003_貼付位置一覧取得)  
+対象ID: [ESDB-API-004](#ESDB-API-004_対象一覧取得)
 | name | Description |
 | ---- | ----------- |
 | enchantName　| エンチャント名 |
