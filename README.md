@@ -16,7 +16,7 @@ API一覧を記載する。
 | [ESDB-API-003](#ESDB-API-003_貼付位置一覧取得) | 貼付位置一覧取得 |
 | [ESDB-API-004](#ESDB-API-004_対象一覧取得) | 対象一覧取得 |
 | [ESDB-API-005](#ESDB-API-005_エンチャント検索通常条件設定) | エンチャント検索（通常条件設定） |
-| ESDB-API-006 | エンチャント検索（フリーワード） |
+| [ESDB-API-006](#ESDB-API-006_エンチャント検索フリーワード) | エンチャント検索（フリーワード） |
 | ESDB-API-007 | エンチャント情報取得（id) |
 | ESDB-API-008 | ランクのエンチャント成功確率取得 |
 | ESDB-API-009 | 下地一覧取得 |
@@ -174,7 +174,48 @@ effect_name オブジェクトの構成を示す。
 ※Input でeffect の指定があった場合のみ返却される
 | Key | Type | Description |
 | --- | ---- | ----------- |
-| effect_id | string | 効果ID
+| effect_id | string | 効果ID |
 | effect | string | 効果表示名 |
 
+## ESDB-API-006_エンチャント検索（フリーワード）
+ヘッダ部検索バーの検索結果を返す。
+Inputを指定しない場合は全件取得する。
 
+### Path
+```
+/search
+```
+### Method
+```
+GET
+```
+### Input
+Format: `Query string`
+| name | Description |
+| ---- | ----------- |
+| search | 検索語句 |
+
+### Output
+Format:`JSON`
+| Key | Type | Description |
+| --- | ---- | ----------- |
+| enchant_list | array(object) | エンチャント情報の配列　詳細は*1参照 |
+
+#### *1 enchant_list
+enchant_list配列内オブジェクトの構成を示す。
+| Key | Type | Description |
+| --- | ---- | ----------- |
+| enchant_id | string | エンチャントID |
+| position_id | string | 位置ID |
+| rank | string | ランク |
+| rank_seq | number | ランクの内部シーケンス |
+| rank_ignore_flg | string | ランクに関係なくエンチャント可能か 0:不可, 1:可 (ランクA以下は全て0) |
+| enchant_name | string | エンチャント名 |
+| enchant_name_2 | string | エンチャント別名 |
+| enchant_name_en | string | エンチャント英名 |
+| target_name | string | 対象表示名 |
+| imp_flg | string | 実装済か 0:未実装 1:実装 |
+| invalid_target_flg | string | 0固定 |
+| effect_kbn | string | 効果区分 |
+| effect_name | string | エンチャントの効果区分 |
+| route_name | string | 入手先 |
