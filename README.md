@@ -17,7 +17,7 @@ API一覧を記載する。
 | [ESDB-API-004](#ESDB-API-004_対象一覧取得) | 対象一覧取得 |
 | [ESDB-API-005](#ESDB-API-005_エンチャント検索通常条件設定) | エンチャント検索（通常条件設定） |
 | [ESDB-API-006](#ESDB-API-006_エンチャント検索フリーワード) | エンチャント検索（フリーワード） |
-| ESDB-API-007 | エンチャント情報取得（id) |
+| [ESDB-API-007](#ESDB-API-007_エンチャント情報取得id) | エンチャント情報取得（id) |
 | ESDB-API-008 | ランクのエンチャント成功確率取得 |
 | ESDB-API-009 | 下地一覧取得 |
 
@@ -216,6 +216,44 @@ enchant_list配列内オブジェクトの構成を示す。
 | target_name | string | 対象表示名 |
 | imp_flg | string | 実装済か 0:未実装 1:実装 |
 | invalid_target_flg | string | 0固定 |
+| effect_kbn | string | 効果区分 |
+| effect_name | string | エンチャントの効果区分 |
+| route_name | string | 入手先 |
+
+## ESDB-API-007_エンチャント情報取得（id)
+エンチャントIDに紐づくエンチャント情報を取得する. 
+  
+参考)  
+エンチャントID: [ESDB-API-001](##ESDB-API-001_エンチャント一覧取得) 
+
+### Path
+```
+/detail/:enchantId
+```
+### Method
+```
+GET
+```
+### Input
+Format: `Path Parameter`
+| name | Description |
+| ---- | ----------- |
+| enchantId | エンチャントIDを指定する(ex. 00000001) |
+
+### Output
+Format:`JSON`
+| Key | Type | Description |
+| --- | ---- | ----------- |
+| enchant_id | string | エンチャントID |
+| position_id | string | 位置ID |
+| rank | string | ランク |
+| rank_ignore_flg | string | 0固定 |
+| enchant_name | string | エンチャント名 |
+| enchant_name_2 | string | エンチャント別名 |
+| enchant_name_en | string | エンチャント英名 |
+| target_code | string | 対象コード |
+| target_name | string | 対象表示名 |
+| imp_flg | string | 実装済か 0:未実装 1:実装 |
 | effect_kbn | string | 効果区分 |
 | effect_name | string | エンチャントの効果区分 |
 | route_name | string | 入手先 |
