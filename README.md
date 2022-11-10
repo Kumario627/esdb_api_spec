@@ -19,7 +19,7 @@ API一覧を記載する。
 | [ESDB-API-006](#ESDB-API-006_エンチャント検索フリーワード) | エンチャント検索（フリーワード） |
 | [ESDB-API-007](#ESDB-API-007_エンチャント情報取得id) | エンチャント情報取得（id) |
 | [ESDB-API-008](#ESDB-API-008_ランクのエンチャント成功確率取得) | ランクのエンチャント成功確率取得 |
-| ESDB-API-009 | 下地一覧取得 |
+| [ESDB-API-009](#ESDB-API-009_下地一覧取得) | 下地一覧取得 |
 
 ## ESDB-API-001_エンチャント一覧取得
 エンチャント一覧を全件取得する。  
@@ -289,3 +289,26 @@ Format:`JSON`
 | elf_rate_thu | string | エルフ木曜成功率 |
 | ancient_rate_thu | string | 古代木曜成功率 |
 | rare_holy_rate_thu | string | 稀代木曜成功率 |
+
+## ESDB-API-009_下地一覧取得
+
+### Path
+```
+/ground/:enchantId
+```
+### Method
+```
+GET
+```
+### Input
+Format: `Path Parameter`
+| name | Description |
+| ---- | ----------- |
+| enchantId | エンチャントIDを指定する(ex. 00000134)  |
+
+### Output
+Format:`JSON`
+| Key | Type | Description |
+| --- | ---- | ----------- |
+| ground | array | target_enchantに対して使用可能なエンチャントをランク毎に格納 |
+| target_enchant | object | 検索条件に指定したエンチャントIDに紐づくエンチャント情報 |
