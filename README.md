@@ -257,3 +257,35 @@ Format:`JSON`
 | effect_kbn | string | 効果区分 |
 | effect_name | string | エンチャントの効果区分 |
 | route_name | string | 入手先 |
+
+## ESDB-API-008_ランクのエンチャント成功確率取得
+
+### Path
+```
+/rank/:rank
+```
+### Method
+```
+GET
+```
+### Input
+Format: `Path Parameter`
+| name | Description |
+| ---- | ----------- |
+| rank | ランクを指定（ex.F) |
+
+### Output
+Format:`JSON`
+| Key | Type | Description |
+| --- | ---- | ----------- |
+| rank | string | ランク |
+| normal_rate | string | 通常成功率 |
+| elite_rate | string | エリート成功率 |
+| elf_rate | string | エルフ成功率 |
+| ancient_rate | string | 古代成功率 |
+| rare_holy_rate | string | 稀代成功率  |
+| normal_rate_thu | string | 通常木曜成功率  |
+| elite_rate_thu | string | エリート木曜成功率 |
+| elf_rate_thu | string | エルフ木曜成功率 |
+| ancient_rate_thu | string | 古代木曜成功率 |
+| rare_holy_rate_thu | string | 稀代木曜成功率 |
