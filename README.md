@@ -310,5 +310,35 @@ Format: `Path Parameter`
 Format:`JSON`
 | Key | Type | Description |
 | --- | ---- | ----------- |
-| ground | array | target_enchantに対して使用可能なエンチャントをランク毎に格納 |
-| target_enchant | object | 検索条件に指定したエンチャントIDに紐づくエンチャント情報 |
+| ground | array | target_enchantに対して使用可能なエンチャントをランク毎に格納 詳細は※1参照 |
+| target_enchant | object | 検索条件に指定したエンチャントIDに紐づくエンチャント情報 詳細は※2参照 |
+
+#### *1 ground
+各ランクに紐づく下地の一覧。  
+
+| Key | Type | Description |
+| --- | ---- | ----------- |
+| rank | string | 下地の該当ランク |
+| enchant_list | array | エンチャント情報一覧 |
+
+enchant_listは下記のように定義されている。
+| Key | Type | Description |
+| --- | ---- | ----------- |
+| enchant_id | string | エンチャントID |
+| position_id | string | 位置ID |
+| rank | string | ランク |
+| enchant_name | string | エンチャント名 |
+| enchant_name_2 | string | エンチャント別名 |
+| enchant_name_en | string | エンチャント英名 |
+
+#### *2 target_enchant
+下地を検索したエンチャント自身の情報
+| Key | Type | Description |
+| --- | ---- | ----------- |
+| enchant_id | string | エンチャントID |
+| enchant_name | string | エンチャント名 |
+| enchant_name_2 | string |  エンチャント別名 |
+| enchant_name_en | string | エンチャント英名 |
+| position_id | string | 位置ID |
+| rank | string | ランク |
+| target_code | string | 対象コード |
