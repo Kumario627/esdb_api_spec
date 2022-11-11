@@ -247,7 +247,7 @@ Format:`JSON`
 | enchant_id | string | エンチャントID |
 | position_id | string | 位置ID |
 | rank | string | ランク |
-| rank_ignore_flg | string | 0固定 |
+| rank_ignore_flg | string | ランクに関係なくエンチャント可能か 0:不可, 1:可 (ランクA以下は全て0) |
 | enchant_name | string | エンチャント名 |
 | enchant_name_2 | string | エンチャント別名 |
 | enchant_name_en | string | エンチャント英名 |
@@ -310,7 +310,7 @@ Format: `Path Parameter`
 Format:`JSON`
 | Key | Type | Description |
 | --- | ---- | ----------- |
-| ground | array | target_enchantに対して使用可能なエンチャントをランク毎に格納 詳細は※1参照 |
+| ground | array(object) | target_enchantに対して使用可能なエンチャントをランク毎に格納 詳細は※1参照 |
 | target_enchant | object | 検索条件に指定したエンチャントIDに紐づくエンチャント情報 詳細は※2参照 |
 
 #### *1 ground
