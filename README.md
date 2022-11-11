@@ -125,7 +125,7 @@ Format: `Query string`
 | enchantName　| エンチャント名 |
 | effect　| 効果ID |
 | effectVal　| 効果の値 |
-| range　| 以上: 1, 以下: 2 |
+| range　| 以上: 1, 以下: 2　（効果の値が〜以上/以下を指定する。任意） |
 | position　| 位置ID |
 | rank　| ランク |
 | rankRange　| 一致: 1, 以上: 2, 以下:3 |
